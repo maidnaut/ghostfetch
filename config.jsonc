@@ -1,0 +1,85 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        // Args: --[c]olor --[t]ext
+        "source": "~/.config/fastfetch/source.sh -c='cyan'",
+        "type": "command-raw",
+        "position": "top",
+        "padding": { "top": 1 },
+    },
+    "display": {
+        "separator": "",
+        "key": {
+            "width": 15,
+        },
+        "color": {
+            "keys": "dim_cyan",
+            "title": "white"
+        },
+    },
+
+    "modules": [
+        // ---------------------------- Header ----------------------------
+        {
+            "type": "title",
+            "key": "----------------------------",
+            "format": "\n",
+        },
+        {
+            "type": "title",
+            "key": "󰁥  Hostname",
+            "format": "{2}",
+        },
+        // ---------------------------- OS Info ----------------------------
+        {
+            "type": "os",
+            "key": "󰣇  Distro",
+        },
+        {
+            "type": "kernel",
+            "key": "  Kernel",
+            "format": "{2}",
+        },
+        // --------------------------- Hardware ----------------------------
+        {
+            "type": "cpu",
+            "key": "  CPU",
+            "format": "{1} ({7})",
+        },
+        {
+            "type": "gpu",
+            "key": "󰢮  GPU",
+            "format": "{2}",
+        },
+        {
+            "type": "memory",
+            "key": "  RAM",
+            "format": "{1} / {2} ({3})",
+
+        },
+        // ---------------------------- Software ---------------------------
+        {
+            "type": "de",
+            "key": "  DE",
+            "format": "{2}",
+        },
+        {
+            "type": "wm",
+            "key": "  WM",
+            "format": "{3}",
+        },
+        {
+            "type": "shell",
+            "key": "  SHELL",
+            "format": "{3}",
+        },
+        // ----------------------------- Uptime ----------------------------
+        {
+            "type": "uptime",
+            "key": "  UPTIME",
+        },
+        {
+            "type": "break"
+        },
+    ]
+}
